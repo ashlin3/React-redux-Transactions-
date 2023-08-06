@@ -15,10 +15,11 @@ export const fetchTransactionsFailure = (error) => {
 };
 
 export const fetchTransactions = () => {
+  let user_id = 'user123';
   return async (dispatch) => {
     try {
       const response = await fetch(
-        'http://localhost:8080/user/user-transactions?uid=user123'
+        'http://localhost:8080/user/user-transactions?uid=' + `${user_id}`
       );
       if (!response.ok) {
         throw new Error('Failed to fetch transactions');

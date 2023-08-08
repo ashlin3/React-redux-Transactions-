@@ -15,7 +15,7 @@ export const fetchTransactionsFailure = (error) => {
 };
 
 export const fetchTransactions = () => {
-  let user_id = 'user123';
+  let user_id = 'user546';
   return async (dispatch) => {
     try {
       const response = await fetch(
